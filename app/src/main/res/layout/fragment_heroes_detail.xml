@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.heroesdetail.HeroesDetailFragment"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:collapseIcon="@color/white"
+            android:background="@color/black"
+            app:titleTextColor="@color/white"
+            app:title="@string/heroes_detail_title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHeroe"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:layout_margin="12dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/shadow_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/imgHeroe">
+
+                <ImageView
+                    android:id="@+id/imgHeroe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtHeroeName"
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/shadow_black"
+                    android:textSize="28sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:maxLines="2"
+                    tools:text="@string/heroes_name">
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtTitleDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardHeroe"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_margin="12dp"
+            android:textColor="@color/black"
+            android:text="@string/heroes_detail_Description">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleDescription"
+            android:layout_margin="12dp"
+            android:textColor="@color/black"
+            android:text="@string/heroes_detail_Description">
+        </TextView>
+
+        <Button
+            android:id="@+id/btnSeries"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnComics"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_margin="12dp"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription"
+            android:text="@string/heroes_detail_series"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red">
+        </Button>
+
+        <Button
+            android:id="@+id/btnComics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnSeries"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_margin="12dp"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription"
+            android:text="@string/heroes_detail_comics"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red">
+        </Button>
+
+        <Button
+            android:id="@+id/btnStories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@id/btnSeries"
+            app:layout_constraintStart_toStartOf="@id/btnSeries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/btnSeries"
+            android:text="@string/heroes_detail_stories"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red">
+        </Button>
+
+        <Button
+            android:id="@+id/btnEvents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@id/btnComics"
+            app:layout_constraintStart_toStartOf="@id/btnComics"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/btnSeries"
+            android:text="@string/heroes_detail_events"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red">
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

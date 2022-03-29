@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MarvelHeroes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Heroes -->
+    <string name="heroes_name">Name</string>
+    <string name="heroes_save">Saves</string>
+    <string name="heroes_Title">Heroes</string>
+
+    <!-- Heroes Detail -->
+    <string name="heroes_detail_title">Heroes Details</string>
+    <string name="heroes_detail_Description">Description</string>
+    <string name="heroes_detail_comics">Comics</string>
+    <string name="heroes_detail_series">Series</string>
+    <string name="heroes_detail_events">Events</string>
+    <string name="heroes_detail_stories">Stories</string>
+
+    <!-- Heroes Collections -->
+    <string name="heroes_collection_title">Heroes Collections</string>
+
+
+</resources>
