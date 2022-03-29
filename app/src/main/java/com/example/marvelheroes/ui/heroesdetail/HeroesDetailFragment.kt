@@ -10,7 +10,9 @@ import com.example.marvelheroes.R
 import com.example.marvelheroes.core.toolbar
 import com.example.marvelheroes.data.model.ItemsCollection
 import com.example.marvelheroes.databinding.FragmentHeroesDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HeroesDetailFragment : Fragment(R.layout.fragment_heroes_detail) {
 
     private lateinit var binding: FragmentHeroesDetailBinding

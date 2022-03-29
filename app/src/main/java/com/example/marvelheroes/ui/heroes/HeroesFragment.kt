@@ -1,36 +1,27 @@
 package com.example.marvelheroes.ui.heroes
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.marvelheroes.R
 import com.example.marvelheroes.data.model.Heroe
-import com.example.marvelheroes.data.remote.HeroesDataSource
 import com.example.marvelheroes.databinding.FragmentHeroesBinding
 import com.example.marvelheroes.presentation.HeroesViewModel
-import com.example.marvelheroes.presentation.HeroesViewModelFactory
-import com.example.marvelheroes.repository.HeroesRepositoryImpl
-import com.example.marvelheroes.repository.RetrofitClient
 import com.example.marvelheroes.ui.adapters.HeroesAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroesClickListener {
 
     private lateinit var binding: FragmentHeroesBinding
     private lateinit var heroesAdapter: HeroesAdapter
-    private val viewModel by viewModels<HeroesViewModel> {
-        HeroesViewModelFactory(
-            HeroesRepositoryImpl(
-                HeroesDataSource(RetrofitClient.WebService)
-            )
-        )
-    }
+    private val viewModel by activityViewModels<HeroesViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

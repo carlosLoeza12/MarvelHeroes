@@ -8,7 +8,9 @@ import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
 import com.example.marvelheroes.R
 import com.example.marvelheroes.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private lateinit var binding: FragmentSplashBinding
