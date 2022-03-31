@@ -7,15 +7,15 @@ data class Data(val data: Results)
 
 data class Results(val results: List<Heroe>)
 @Parcelize
-data class Heroe(val id: Int,
-                 val name: String,
-                 val description: String,
-                 val thumbnail: Thumbnail,
-                 var urmImg: String,
-                 val comics: ItemsCollection,
-                 val stories: ItemsCollection,
-                 val events: ItemsCollection,
-                 val series: ItemsCollection
+data class Heroe(val id: Int = 0,
+                 val name: String = "",
+                 val description: String = "",
+                 val thumbnail: Thumbnail? = null,
+                 var urmImg: String = "",
+                 val comics: ItemsCollection? = null,
+                 val stories: ItemsCollection? = null,
+                 val events: ItemsCollection? = null,
+                 val series: ItemsCollection? =null
 ): Parcelable
 
 @Parcelize
@@ -28,6 +28,6 @@ data class Thumbnail(
 data class ItemsCollection(val items: List<Item>): Parcelable
 
 @Parcelize
-data class Item(val name: String): Parcelable
+data class Item(val name: String, val resourceURI: String): Parcelable
 
 
