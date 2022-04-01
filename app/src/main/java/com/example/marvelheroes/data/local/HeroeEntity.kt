@@ -1,16 +1,12 @@
 package com.example.marvelheroes.data.local
 
-import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Index
 import androidx.room.PrimaryKey
-import kotlinx.parcelize.Parcelize
 
 @Entity
-@Parcelize
 data class HeroeEntity(
-    @PrimaryKey()
+    @PrimaryKey
     val id: Int,
     @ColumnInfo(name = "name")
     val name: String,
@@ -18,16 +14,18 @@ data class HeroeEntity(
     val description: String,
     @ColumnInfo(name = "urlImg")
     var urmImg: String
-) : Parcelable
+)
 
-
-@Entity()
-@Parcelize
-data class SeriesEntity(
-    @PrimaryKey()
-    val name: String,
+@Entity
+data class HeroeSeriesEntity(
+    @PrimaryKey
+    val id: Int,
     @ColumnInfo(name="idHeroe")
     val idHeroe: Int,
-    @ColumnInfo(name = "resourceURI")
-    val resourceURI: String
-) : Parcelable
+    @ColumnInfo(name="title")
+    val title: String,
+    @ColumnInfo(name = "description")
+    val description: String?,
+    @ColumnInfo(name = "urlImg")
+    val urlImg: String
+)

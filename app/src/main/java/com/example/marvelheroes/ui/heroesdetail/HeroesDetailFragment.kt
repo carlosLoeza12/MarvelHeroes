@@ -3,15 +3,12 @@ package com.example.marvelheroes.ui.heroesdetail
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import coil.load
 import com.example.marvelheroes.R
 import com.example.marvelheroes.core.toolbar
-import com.example.marvelheroes.data.model.ItemsCollection
 import com.example.marvelheroes.databinding.FragmentHeroesDetailBinding
-import com.example.marvelheroes.presentation.HeroesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,23 +35,14 @@ class HeroesDetailFragment : Fragment(R.layout.fragment_heroes_detail) {
 
     private fun initButtons(){
 
-        binding.btnComics.setOnClickListener {
-        }
         binding.btnSeries.setOnClickListener {
             findNavController().navigate(
                 HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(args.currentHeroe.id))
         }
         binding.btnEvents.setOnClickListener {
-           // itemsCollections(args.currentHeroe.events)
+            findNavController().navigate(
+                HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(args.currentHeroe.id))
         }
-        binding.btnStories.setOnClickListener {
-            //itemsCollections(args.currentHeroe.stories)
-        }
-    }
-
-    private fun itemsCollections(items: ItemsCollection){
-        findNavController().navigate(
-            HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(args.currentHeroe.id))
     }
 
 }

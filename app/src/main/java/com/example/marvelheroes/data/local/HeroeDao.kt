@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.marvelheroes.data.model.Item
 
 @Dao
 interface HeroeDao {
@@ -16,9 +15,9 @@ interface HeroeDao {
     suspend fun saveHeroe(heroeEntity: HeroeEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveSeries(seriesEntity: SeriesEntity)
+    suspend fun saveHeroeSerie(heroeSeriesEntity: HeroeSeriesEntity)
 
-    @Query("SELECT *FROM SeriesEntity where idHeroe = :id")
-    suspend fun getAllSeriesByHero(id: Int): List<Item>
+    @Query("SELECT * FROM HeroeSeriesEntity WHERE idHeroe = :idHeroe")
+    suspend fun getAllHeroesSeries(idHeroe: Int): List<HeroeSeriesEntity>
 
 }

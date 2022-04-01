@@ -3,10 +3,11 @@ package com.example.marvelheroes.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.marvelheroes.data.model.Item
+import coil.load
+import com.example.marvelheroes.data.model.HeroesSeries
 import com.example.marvelheroes.databinding.ItemHeroeCollectionsBinding
 
-class HeroesCollectionAdapter(private val listCollections: List<Item>
+class HeroesCollectionAdapter(private val listCollections: List<HeroesSeries>
 ) : RecyclerView.Adapter<HeroesCollectionAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroesCollectionAdapter.ViewHolder {
@@ -22,8 +23,10 @@ class HeroesCollectionAdapter(private val listCollections: List<Item>
 
     inner class ViewHolder(private val itemBinding: ItemHeroeCollectionsBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(collection: Item) {
-            itemBinding.txtNameCollection.text = collection.name
+        fun bind(series: HeroesSeries) {
+            itemBinding.txtSerieName.text = series.title
+            itemBinding.txtSerieDescription.text = series.description
+            itemBinding.imgSerie.load(series.urmImg)
         }
     }
 }

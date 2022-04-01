@@ -1,8 +1,9 @@
 package com.example.marvelheroes.data.local
 
 import com.example.marvelheroes.core.toHeroList
+import com.example.marvelheroes.core.toHeroeSeriesList
 import com.example.marvelheroes.data.model.Heroe
-import com.example.marvelheroes.data.model.Item
+import com.example.marvelheroes.data.model.HeroesSeries
 import javax.inject.Inject
 
 class LocalHeroDataSource @Inject constructor(private val heroeDao: HeroeDao) {
@@ -15,12 +16,12 @@ class LocalHeroDataSource @Inject constructor(private val heroeDao: HeroeDao) {
         heroeDao.saveHeroe(heroeEntity)
     }
 
-    suspend fun saveSeries(seriesEntity: SeriesEntity){
-        heroeDao.saveSeries(seriesEntity)
+    suspend fun saveHeroeSerie(heroeSeriesEntity: HeroeSeriesEntity){
+        heroeDao.saveHeroeSerie(heroeSeriesEntity)
     }
 
-    suspend fun getSeriesByHeroe(idHeroe: Int): List<Item>{
-       return heroeDao.getAllSeriesByHero(idHeroe)
+    suspend fun getListHeroesSeries(idHeroe: Int): List<HeroesSeries>{
+        return heroeDao.getAllHeroesSeries(idHeroe).toHeroeSeriesList()
     }
 
 }

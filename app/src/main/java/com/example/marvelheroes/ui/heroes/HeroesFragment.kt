@@ -38,7 +38,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroes
 
     private fun observersViewModels() {
         viewModel.listHeroes.observe(viewLifecycleOwner, Observer {
-            Log.e("a", it.toString())
             setRecycler(it)
         })
         viewModel.isLoading.observe(viewLifecycleOwner, Observer {

@@ -5,14 +5,12 @@ import android.content.Context
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.marvelheroes.data.local.HeroeEntity
-import com.example.marvelheroes.data.local.SeriesEntity
+import com.example.marvelheroes.data.local.HeroeSeriesEntity
 import com.example.marvelheroes.data.model.Heroe
-import com.example.marvelheroes.data.model.Item
-import com.example.marvelheroes.data.model.ItemsCollection
+import com.example.marvelheroes.data.model.HeroesSeries
 
 fun Activity.toolbar(toolbar: Toolbar){
     (this as AppCompatActivity).setSupportActionBar(toolbar)
@@ -50,9 +48,32 @@ fun Heroe.toHeroEntity() : HeroeEntity{
     )
 }
 
-fun Item.toSerieEntity(idHero: Int): SeriesEntity =
-    SeriesEntity(name = this.name, idHeroe = idHero, resourceURI = this.resourceURI)
+fun HeroesSeries.toHeroeSeriesEntity(idHeroe: Int): HeroeSeriesEntity{
+    val ruta = this.thumbnail?.path?.replace("http", "https")+"."+ this.thumbnail?.extension
+    return HeroeSeriesEntity(
+        this.id,
+        idHeroe,
+        this.title,
+        this.description, ruta)
+}
 
+fun List<HeroeSeriesEntity>.toHeroeSeriesList(): List<HeroesSeries>{
+    val listSeries = mutableListOf<HeroesSeries>()
+    this.forEach { serieEntity ->
+        listSeries.add(serieEntity.toHeroeSerie())
+    }
+    return listSeries
+}
+
+fun HeroeSeriesEntity.toHeroeSerie(): HeroesSeries{
+    return HeroesSeries(
+        this.id,
+        this.title,
+        this.description,
+        null,
+        this.urlImg
+    )
+}
 
 val Context.networkInfo: NetworkInfo?
     get() =
