@@ -40,7 +40,6 @@ class HeroExtraInfoFragment : Fragment(R.layout.fragment_hero_extra_info) {
     private fun setRecycler() {
 
         viewModel.listHeroesSeries.observe(viewLifecycleOwner, Observer {listSeries ->
-            Log.e("aa", listSeries.toString())
             if(listSeries.isNullOrEmpty()) {
                 binding.imgNA.isVisible = true
             }

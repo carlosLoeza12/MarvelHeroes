@@ -44,7 +44,6 @@ class HeroesViewModel @Inject constructor(private val heroesRepository: HeroesRe
                     listHeroesSeries.postValue(result)
                     isLoadingSeries.postValue(false)
                 }
-                else{isLoadingSeries.postValue(false)}
             } catch (e: Exception) {
                 isLoadingSeries.postValue(false)
             }
