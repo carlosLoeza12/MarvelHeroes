@@ -1,5 +1,6 @@
 package com.example.marvelheroes.ui.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -37,11 +38,7 @@ class HeroesAdapter(
     inner class ViewHolder(private val binding: ItemHeroeBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(heroe: Heroe){
             binding.txtName.text = heroe.name
-            val ruta = heroe.thumbnail.path.replace(
-                "http",
-                "https") + "." + heroe.thumbnail.extension
-            heroe.urmImg = ruta
-            binding.imgHeroe.load(ruta)
+            binding.imgHeroe.load(heroe.urmImg)
         }
     }
 

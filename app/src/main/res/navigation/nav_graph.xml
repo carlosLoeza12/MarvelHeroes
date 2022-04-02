@@ -55,7 +55,7 @@
         android:label="fragment_hero_extra_info"
         tools:layout="@layout/fragment_hero_extra_info" >
         <argument
-            android:name="itemCollections"
-            app:argType="com.example.marvelheroes.data.model.ItemsCollection" />
+            android:name="idHeroe"
+            app:argType="integer" />
     </fragment>
 </navigation>

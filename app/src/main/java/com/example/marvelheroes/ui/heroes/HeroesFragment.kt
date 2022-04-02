@@ -1,6 +1,7 @@
 package com.example.marvelheroes.ui.heroes
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
@@ -37,7 +38,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroes
 
     private fun observersViewModels() {
         viewModel.listHeroes.observe(viewLifecycleOwner, Observer {
-            setRecycler(it.results)
+            setRecycler(it)
         })
         viewModel.isLoading.observe(viewLifecycleOwner, Observer {
             binding.progress.isVisible = it

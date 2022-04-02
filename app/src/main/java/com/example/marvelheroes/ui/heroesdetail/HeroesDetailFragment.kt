@@ -8,7 +8,6 @@ import androidx.navigation.fragment.navArgs
 import coil.load
 import com.example.marvelheroes.R
 import com.example.marvelheroes.core.toolbar
-import com.example.marvelheroes.data.model.ItemsCollection
 import com.example.marvelheroes.databinding.FragmentHeroesDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,23 +35,14 @@ class HeroesDetailFragment : Fragment(R.layout.fragment_heroes_detail) {
 
     private fun initButtons(){
 
-        binding.btnComics.setOnClickListener {
-            itemsCollections(args.currentHeroe.comics)
-        }
         binding.btnSeries.setOnClickListener {
-            itemsCollections(args.currentHeroe.series)
+            findNavController().navigate(
+                HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(args.currentHeroe.id))
         }
         binding.btnEvents.setOnClickListener {
-            itemsCollections(args.currentHeroe.events)
+            findNavController().navigate(
+                HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(args.currentHeroe.id))
         }
-        binding.btnStories.setOnClickListener {
-            itemsCollections(args.currentHeroe.stories)
-        }
-    }
-
-    private fun itemsCollections(items: ItemsCollection){
-        findNavController().navigate(
-            HeroesDetailFragmentDirections.actionHeroesDetailFragmentToHeroExtraInfoFragment(items))
     }
 
 }
