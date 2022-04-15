@@ -29,7 +29,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
             override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
-                findNavController().navigate(R.id.action_splashFragment_to_heroesFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_sigInFragment)
             }
         }
         timer.start()

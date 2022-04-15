@@ -40,8 +40,8 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_heroesFragment"
-            app:destination="@id/heroesFragment"
+            android:id="@+id/action_splashFragment_to_sigInFragment"
+            app:destination="@id/sigInFragment"
             app:enterAnim="@anim/slide_from_right"
             app:exitAnim="@anim/slide_to_left"
             app:popEnterAnim="@anim/slide_from_left"
@@ -57,5 +57,20 @@
         <argument
             android:name="idHeroe"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/sigInFragment"
+        android:name="com.example.marvelheroes.ui.signin.SigInFragment"
+        android:label="fragment_sig_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_sigInFragment_to_heroesFragment"
+            app:destination="@id/heroesFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_rigth"
+            app:popUpTo="@id/sigInFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

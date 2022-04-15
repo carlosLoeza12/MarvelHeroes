@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/drawable/ic_baseline_facebook_24.xml" value="0.26875" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.26875" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.26875" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/activity_main.xml" value="0.10925925925925926" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_hero_extra_info.xml" value="0.2" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_heroes.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_heroes_detail.xml" value="0.264" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_search_heroe.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_sig_in.xml" value="0.21195652173913043" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_sign_in.xml" value="0.264" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/fragment_splash.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/item_heroe.xml" value="0.21105072463768115" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/MarvelHeroes/app/src/main/res/layout/item_heroe_collections.xml" value="0.2526041666666667" />

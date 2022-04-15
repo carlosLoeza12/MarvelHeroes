@@ -4,8 +4,17 @@
 
     <!-- Heroes -->
     <string name="heroes_name">Name</string>
-    <string name="heroes_save">Saves</string>
+    <string name="heroes_profile">Profile</string>
     <string name="heroes_Title">Heroes</string>
+
+    <!-- Heroes SignIn -->
+    <string name="heroes_signin_title">Sign In</string>
+    <string name="heroes_signin_mail">Email</string>
+    <string name="heroes_signin_password">Password</string>
+    <string name="heroes_signin_forgot_password">¿Forgot your password?</string>
+    <string name="heroes_signin_facebook">Iniciar con Facebook</string>
+    <string name="heroes_signin_gmail">Iniciar con Gmail</string>
+    <string name="heroes_signin_marvel"> Data provided by Marvel. © 2022 MARVEL</string>
 
     <!-- Heroes Detail -->
     <string name="heroes_detail_title">Heroes Details</string>
@@ -17,6 +26,13 @@
 
     <!-- Heroes Collections -->
     <string name="heroes_collection_title">Heroes Collections</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">345957800885677</string>
+    <string name="fb_login_protocol_scheme">fb345957800885677</string>
+    <string name="facebook_client_token">cb64c6eeb2b3a64a9800b14447725b1d</string>
+
+
 
 
 </resources>

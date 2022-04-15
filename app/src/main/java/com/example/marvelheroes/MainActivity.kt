@@ -2,7 +2,6 @@ package com.example.marvelheroes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.fragment.NavHostFragment
 import com.example.marvelheroes.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
