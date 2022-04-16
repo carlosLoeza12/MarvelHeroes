@@ -33,7 +33,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroes
         observersViewModels()
         //show item toolbar
         setHasOptionsMenu(true);
-
     }
 
     private fun observersViewModels() {

@@ -7,13 +7,16 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
 import com.example.marvelheroes.R
+import com.example.marvelheroes.application.Prefs
 import com.example.marvelheroes.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private lateinit var binding: FragmentSplashBinding
+     @Inject lateinit var prefs: Prefs
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSplashBinding.bind(view)
@@ -24,15 +27,16 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
     private fun timerSplash() {
-
         val timer = object : CountDownTimer(1700, 1000) {
             override fun onTick(millisUntilFinished: Long) {}
-
             override fun onFinish() {
-                findNavController().navigate(R.id.action_splashFragment_to_sigInFragment)
+                if (prefs.getSession()){
+                    findNavController().navigate(R.id.action_splashFragment_to_heroesFragment)
+                }else{
+                    findNavController().navigate(R.id.action_splashFragment_to_sigInFragment)
+                }
             }
         }
         timer.start()
-
     }
 }

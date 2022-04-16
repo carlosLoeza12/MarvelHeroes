@@ -106,7 +106,7 @@
                 </Button>
 
                 <Button
-                    android:id="@+id/btnGmail"
+                    android:id="@+id/btnGoogle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?attr/selectableItemBackground"

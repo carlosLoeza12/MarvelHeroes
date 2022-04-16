@@ -1,7 +1,6 @@
 package com.example.marvelheroes.repository
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.marvelheroes.data.model.User
 import com.facebook.CallbackManager
@@ -35,9 +34,8 @@ class DoLoginFacebook @Inject constructor() {
                                 val firstName = fbObject?.getString("first_name")
                                 val lastName = fbObject?.getString("last_name")
                                 val email = fbObject?.getString("email")
-                                val urlImg =
-                                    "https://graph.facebook.com/$id/picture?return_ssl_resources=1"
-                                it.resume(User(id, firstName, lastName, email, urlImg))
+                                val urlImg = "https://graph.facebook.com/$id/picture?return_ssl_resources=1"
+                                it.resume(User(id, firstName, lastName, email, urlImg, "Facebook"))
 
                             } catch (e: JSONException) {
                                 it.resume(e)

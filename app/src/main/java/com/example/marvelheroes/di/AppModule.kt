@@ -3,6 +3,7 @@ package com.example.marvelheroes.di
 import android.content.Context
 import androidx.room.Room
 import com.example.marvelheroes.application.AppConstants
+import com.example.marvelheroes.application.Prefs
 import com.example.marvelheroes.data.local.AppDatabase
 import com.example.marvelheroes.data.local.HeroeDao
 import com.example.marvelheroes.repository.WebService

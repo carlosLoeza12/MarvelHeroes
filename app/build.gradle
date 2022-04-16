@@ -75,5 +75,7 @@ dependencies {
     implementation "androidx.room:room-ktx:2.4.2"
     //SignIn Facebook
     implementation 'com.facebook.android:facebook-login:latest.release'
+    //SigIn Google
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
 
 }
