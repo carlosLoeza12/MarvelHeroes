@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import coil.load
 import com.example.marvelheroes.R
 import com.example.marvelheroes.application.Prefs
+import com.example.marvelheroes.core.loadDialog
 import com.example.marvelheroes.core.toolbar
+import com.example.marvelheroes.data.DialogType
 import com.example.marvelheroes.databinding.FragmentUserProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -44,7 +46,7 @@ class UserProfileFragment : Fragment(R.layout.fragment_user_profile) {
 
         when (item.itemId) {
             R.id.itemExit -> {
-
+                this.loadDialog(getString(R.string.dialog_close_app),DialogType.CLOSE_APP ,prefs)
             }
         }
         return super.onOptionsItemSelected(item)

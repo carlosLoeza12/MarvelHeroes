@@ -38,4 +38,10 @@
     <string name="user_profile_lastname">Last Name</string>
     <string name="user_profile_email">Email</string>
     <string name="user_profile_type_signing">You logged with:</string>
+
+    <!-- Dialog -->
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_information">Information</string>
+    <string name="dialog_close_app">Do you want to exit the application?</string>
+
 </resources>
