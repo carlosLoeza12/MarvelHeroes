@@ -32,7 +32,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroes
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         observersViewModels()
         //show item toolbar
-        setHasOptionsMenu(true);
+        setHasOptionsMenu(true)
     }
 
     private fun observersViewModels() {
@@ -73,11 +73,9 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes),HeroesAdapter.OnHeroes
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.itemSave -> {
-                // preferencessss.wipe()
-                // findNavController().navigate(R.id.action_heroesFragment_to_searchHeroeFragment)
+            R.id.itemProfile -> {
+                findNavController().navigate(R.id.action_heroesFragment_to_userProfileFragment)
             }
-
         }
         return super.onOptionsItemSelected(item)
     }

@@ -16,13 +16,17 @@ import kotlin.coroutines.suspendCoroutine
 
 class DoLoginFacebook @Inject constructor() {
 
+    private val loginManager = LoginManager.getInstance()
+
     suspend fun getDataFacebook(callbackManager: CallbackManager, fragment: Fragment): Any =
 
         suspendCoroutine {
             LoginManager.getInstance()
                 .logInWithReadPermissions(fragment, listOf("email", "public_profile"))
 
-            LoginManager.getInstance().registerCallback(callbackManager,
+            loginManager.logOut()
+
+            loginManager.registerCallback(callbackManager,
                 object : FacebookCallback<LoginResult> {
 
                     override fun onSuccess(result: LoginResult) {
@@ -36,7 +40,6 @@ class DoLoginFacebook @Inject constructor() {
                                 val email = fbObject?.getString("email")
                                 val urlImg = "https://graph.facebook.com/$id/picture?return_ssl_resources=1"
                                 it.resume(User(id, firstName, lastName, email, urlImg, "Facebook"))
-
                             } catch (e: JSONException) {
                                 it.resume(e)
                             }
@@ -50,11 +53,12 @@ class DoLoginFacebook @Inject constructor() {
 
                     override fun onCancel() {
                         it.resume("cancel")
-
+                        loginManager.logOut()
                     }
 
                     override fun onError(error: FacebookException) {
                         it.resume(error)
+                        loginManager.logOut()
                     }
                 })
         }

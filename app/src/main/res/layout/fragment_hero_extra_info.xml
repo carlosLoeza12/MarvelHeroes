@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/no_asignado"
+        android:src="@drawable/no_assigned"
         android:visibility="gone">
     </ImageView>
     <ProgressBar

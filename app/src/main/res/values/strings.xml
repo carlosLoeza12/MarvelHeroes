@@ -32,7 +32,10 @@
     <string name="fb_login_protocol_scheme">fb345957800885677</string>
     <string name="facebook_client_token">cb64c6eeb2b3a64a9800b14447725b1d</string>
 
-
-
-
+    <!-- User Profile -->
+    <string name="user_profile_title">Profile</string>
+    <string name="user_profile_title_information">This is your information!</string>
+    <string name="user_profile_lastname">Last Name</string>
+    <string name="user_profile_email">Email</string>
+    <string name="user_profile_type_signing">You logged with:</string>
 </resources>

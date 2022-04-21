@@ -17,6 +17,13 @@
             app:exitAnim="@anim/slide_to_left"
             app:popEnterAnim="@anim/slide_from_left"
             app:popExitAnim="@anim/slide_to_rigth" />
+        <action
+            android:id="@+id/action_heroesFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_rigth"/>
     </fragment>
     <fragment
         android:id="@+id/heroesDetailFragment"
@@ -82,4 +89,9 @@
             app:popUpTo="@id/sigInFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.marvelheroes.ui.user.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
 </navigation>
