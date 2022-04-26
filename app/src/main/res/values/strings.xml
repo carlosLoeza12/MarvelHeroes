@@ -12,8 +12,8 @@
     <string name="heroes_signin_mail">Email</string>
     <string name="heroes_signin_password">Password</string>
     <string name="heroes_signin_forgot_password">¿Forgot your password?</string>
-    <string name="heroes_signin_facebook">Iniciar con Facebook</string>
-    <string name="heroes_signin_gmail">Iniciar con Gmail</string>
+    <string name="heroes_signin_facebook">With Facebook</string>
+    <string name="heroes_signin_gmail">With Gmail</string>
     <string name="heroes_signin_marvel"> Data provided by Marvel. © 2022 MARVEL</string>
 
     <!-- Heroes Detail -->
@@ -28,9 +28,8 @@
     <string name="heroes_collection_title">Heroes Collections</string>
 
     <!-- Facebook -->
-    <string name="facebook_app_id">345957800885677</string>
-    <string name="fb_login_protocol_scheme">fb345957800885677</string>
-    <string name="facebook_client_token">cb64c6eeb2b3a64a9800b14447725b1d</string>
+    <!-- For security the facebook passwords were deleted -->
+
 
     <!-- User Profile -->
     <string name="user_profile_title">Profile</string>
@@ -40,7 +39,7 @@
     <string name="user_profile_type_signing">You logged with:</string>
 
     <!-- Dialog -->
-    <string name="dialog_ok">Ok</string>
+    <string name="dialog_ok">OK</string>
     <string name="dialog_information">Information</string>
     <string name="dialog_close_app">Do you want to exit the application?</string>
 
